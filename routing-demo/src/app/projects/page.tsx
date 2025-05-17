@@ -2,6 +2,7 @@
 
 import { Button } from "@/components/ui/button";
 import { ExternalLink, Github } from "lucide-react";
+import Image from "next/image";
 
 export default function Projects() {
   const projects = [
@@ -10,25 +11,24 @@ export default function Projects() {
       title: "TalentSync",
       description:
         "A freelance platform to help recruiters find freelancers easily. Built with MERN stack.",
-      image: "/project1.jpg",
+      image: "/images/placeholder_project.jpeg",
       liveUrl: "https://example.com/project1",
-      githubUrl: "https://github.com/johndoe/ecommerce-platform",
+      githubUrl: "https://github.com/nathanielalex/TalentSync",
     },
     {
       id: 2,
       title: "HoloX Cafe",
       description:
-        "A cafe management website that helps customer to order and owner to manage the cafe. Built using Laravel",
-      image: "/project2.jpg",
+        "A cafe management website that helps customer to order and owner to manage the cafe. Built using Laravel.",
+      image: "/images/placeholder_project.jpeg",
       liveUrl: "https://example.com/project2",
-      githubUrl: "https://github.com/johndoe/task-manager",
+      githubUrl: "https://github.com/nathanielalex/HoloX-Cafe-Website",
     },
   ];
 
   return (
     <div className="min-h-screen px-6 py-12 md:py-20">
       <div className="container mx-auto max-w-6xl">
-        {/* Page Header */}
         <div className="mb-16 text-center">
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-4">
             My Projects
@@ -40,7 +40,6 @@ export default function Projects() {
           <div className="h-1 w-20 bg-black dark:bg-white mx-auto mt-8"></div>
         </div>
 
-        {/* Featured Projects Section */}
         {projects.length > 0 && (
           <section className="mb-20">
             <h2 className="text-2xl font-bold mb-10">Featured Projects</h2>
@@ -53,15 +52,17 @@ export default function Projects() {
                     index % 2 !== 0 ? "lg:flex-row-reverse" : ""
                   }`}
                 >
-                  {/* Project Image */}
                   <div className="aspect-video bg-gray-100 dark:bg-gray-800 rounded-lg overflow-hidden border border-gray-200 dark:border-gray-700 flex items-center justify-center">
-                    {/* Placeholder for project image */}
-                    <div className="text-4xl text-gray-400 dark:text-gray-500">
-                      Project Preview
+                    <div className="relative w-full h-full">
+                      <Image
+                        src={project.image}
+                        alt="Sample"
+                        fill
+                        className="object-cover"
+                      />
                     </div>
                   </div>
 
-                  {/* Project Details */}
                   <div>
                     <h3 className="text-2xl font-bold mb-4">{project.title}</h3>
 

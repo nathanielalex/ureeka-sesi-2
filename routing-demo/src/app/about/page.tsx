@@ -2,6 +2,7 @@
 
 import { Button } from "@/components/ui/button";
 import { Download, Mail } from "lucide-react";
+import Image from "next/image";
 
 export default function About() {
   const technicalSkills = [
@@ -34,8 +35,13 @@ export default function About() {
           <div className="grid grid-cols-1 md:grid-cols-5 gap-12 items-start">
             <div className="md:col-span-2 flex justify-center md:justify-start">
               <div className="w-64 h-64 md:w-full md:max-w-md md:h-auto aspect-square bg-gray-100 dark:bg-gray-800 rounded-lg overflow-hidden border-2 border-black dark:border-white">
-                <div className="w-full h-full flex items-center justify-center text-6xl">
-                  JD
+                <div className="w-full h-full flex items-center justify-center relative">
+                  <Image
+                    src="/images/profile_picture.jpeg"
+                    alt="Logo"
+                    fill
+                    className="object-cover"
+                  />
                 </div>
               </div>
             </div>
@@ -47,22 +53,17 @@ export default function About() {
 
               <div className="space-y-4 text-lg text-gray-700 dark:text-gray-300">
                 <p>
-                  I`m a passionate Front-end Developer based in San Francisco
-                  with over 5 years of experience creating responsive,
-                  user-friendly web applications.
+                  I`m a passionate Web Developer based in Indonesia with over 5
+                  years of experience creating responsive, user-friendly web
+                  applications.
                 </p>
                 <p>
-                  My journey in web development began at the University of
-                  California, where I earned my Bachelor`s degree in Computer
-                  Science. Since then, I`ve worked with startups and established
-                  companies, helping them build modern web experiences that
-                  users love.
+                  My journey in web development began at Binus University, where
+                  I earned my Bachelor`s degree in Computer Science.
                 </p>
                 <p>
-                  I specialize in React.js, TypeScript, and Next.js, and I`m
+                  I specialize in React.js, TypeScript, and Express.js, and I`m
                   constantly exploring new technologies to improve my skill set.
-                  When I`m not coding, you can find me hiking in the mountains
-                  or experimenting with new cooking recipes.
                 </p>
               </div>
 

@@ -2,7 +2,8 @@
 
 import { Button } from "@/components/ui/button";
 import { TypewriterEffect } from "@/components/ui/typewriter-effects";
-import { ArrowRight, Code, Monitor, Palette } from "lucide-react";
+import { ArrowRight, Bot, Code, Monitor } from "lucide-react";
+import Image from "next/image";
 import Link from "next/link";
 
 export default function Home() {
@@ -45,8 +46,13 @@ export default function Home() {
         </div>
 
         <div className="md:w-2/5 flex justify-center">
-          <div className="w-64 h-64 md:w-80 md:h-80 bg-gray-100 dark:bg-gray-800 rounded-full flex items-center justify-center overflow-hidden border-4 border-black dark:border-white">
-            <span className="text-6xl">JD</span>
+          <div className="w-64 h-64 md:w-80 md:h-80 bg-white rounded-full flex items-center justify-center overflow-hidden border-4 border-black dark:border-white">
+            <Image
+              src="/images/profile_picture.jpeg"
+              alt="Logo"
+              width={200}
+              height={100}
+            />
           </div>
         </div>
       </section>
@@ -68,7 +74,7 @@ export default function Home() {
 
           <div className="bg-white dark:bg-gray-800 p-8 rounded-lg shadow-sm border border-gray-200 dark:border-gray-700">
             <div className="mb-4 p-4 bg-gray-100 dark:bg-gray-700 inline-block rounded-full">
-              <Palette className="w-8 h-8" />
+              <Bot className="w-8 h-8" />
             </div>
             <h3 className="text-xl font-bold mb-2">Artificial Intelligence</h3>
             <p className="text-gray-600 dark:text-gray-300">
